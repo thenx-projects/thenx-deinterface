@@ -11,12 +11,13 @@ spring:
       maximum-pool-size: 20
   redis:
     host: 127.0.0.1
-    port: 6379
+    port: 36379
     password: ''
     lettuce:
       pool:
         max-active: 20
         max-idle: 5
         min-idle: 2
+    database: 1
 server:
   port: 20000

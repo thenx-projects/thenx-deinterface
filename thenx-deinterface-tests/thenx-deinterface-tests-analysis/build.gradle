@@ -3,8 +3,6 @@ bootJar.enabled = false
 
 dependencies {
     implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
+    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-common'))
 }
 
-springBoot {
-    mainClass.set('org.thenx.ThenxDeInterfaceEntranceApplication')
-}

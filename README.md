@@ -20,6 +20,28 @@
 
 ## 三、从源码构建项目
 
-### 1. 编译器
+​		一切操作均需要从 [Thenx De-Interface](https://github.com/thenx-projects/thenx-deinterface) 项目中 Fork 到自己仓库。便于各项目贡献者提交、合并代码。
 
-​		编译器使用 **IntelliJ IDEA 2021.x** 
+### 3.1. 项目的预配置
+
+#### 3.1.1.  Git Clone
+
+​		执行如下指令将 [Thenx De-Interface](https://github.com/thenx-projects/thenx-deinterface) 项目 **Clone** 下来：
+
+```shell
+$ git clone --depth=1 https://github.com/thenx-projects/thenx-deinterface.git
+```
+
+​		**注意: 你需要将 Clone 地址更换为你 Fork 之后的仓库地址 !**
+
+#### 3.1.2. 配置远程主仓库
+
+​		执行如下指令配置 **Thenx De-interface** 主仓库
+
+```shell
+$ git remote add upstream https://github.com/thenx-projects/thenx-deinterface.git
+
+# 通过如下指令可查看是否配置成功，其中两条 origin，两条 upstream
+$ git remote -v
+```
+
