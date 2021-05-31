@@ -1,0 +1,15 @@
+jar.enabled = true
+bootJar.enabled = false
+
+dependencies {
+    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
+}
+
+//jar {
+//    manifest {
+//        attributes(
+//                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+//                'Main-Class': 'com.tlcp.TlcpApplication'
+//        )
+//    }
+//}
