@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: thenx-deinterface
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tdi_db
+    username: tdi_user
+    password: '123456789.'
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: ''
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 5
+        min-idle: 2
+server:
+  port: 20000

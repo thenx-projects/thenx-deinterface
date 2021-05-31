@@ -1,0 +1,8 @@
+jar.enabled = true
+bootJar.enabled = false
+
+dependencies {
+    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
+    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-common'))
+}
+
