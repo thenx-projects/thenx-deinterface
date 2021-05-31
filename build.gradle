@@ -3,7 +3,9 @@ buildscript {
         springBootVersion = '2.5.0' as Object
     }
     repositories {
-        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/'}
+//        maven { url 'https://repo.spring.io/milestone' }
         mavenCentral()
     }
     dependencies {
@@ -30,7 +32,9 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
     repositories {
-        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/'}
+//        maven { url 'https://repo.spring.io/milestone' }
         mavenCentral()
     }
 
