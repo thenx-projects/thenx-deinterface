@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-bootJar.enabled = true
+jar.enabled = true
+bootJar.enabled = false
 
 dependencies {
     implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
+    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-common'))
 }
 
-springBoot {
-    mainClass.set('org.thenx.ThenxDeInterfaceEntranceApplication')
-}

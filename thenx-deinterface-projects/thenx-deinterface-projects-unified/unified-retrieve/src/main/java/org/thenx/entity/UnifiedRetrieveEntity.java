@@ -14,12 +14,50 @@
  * limitations under the License.
  */
 
-bootJar.enabled = true
+package org.thenx.entity;
 
-dependencies {
-    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
-}
+import lombok.Data;
 
-springBoot {
-    mainClass.set('org.thenx.ThenxDeInterfaceEntranceApplication')
+/**
+ * @author wales
+ * <p>
+ * 数据源基本数据模型
+ */
+@Data
+public class UnifiedRetrieveEntity {
+
+    /**
+     * 配置表编码
+     */
+    private String dsCode;
+
+    /**
+     * 表名
+     */
+    private String tblName;
+
+    /**
+     * 描述
+     */
+    private String dsDesc;
+
+    /**
+     * 查看数据源
+     */
+    private String dsCat;
+
+    /**
+     * 类型
+     */
+    private String dsType;
+
+    /**
+     * 具体SQL语句
+     */
+    private String selectClause;
+
+    /**
+     * 条件
+     */
+    private String orderClause;
 }
