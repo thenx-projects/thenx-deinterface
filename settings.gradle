@@ -15,9 +15,10 @@
  */
 
 rootProject.name = 'thenx-deinterface'
-include "thenx-deinterface:thenx-deinterface-projects"
-include "thenx-deinterface:thenx-deinterface-tests"
-
+include "thenx-deinterface-projects:thenx-deinterface-projects-unified:unified-create"
+include "thenx-deinterface-projects:thenx-deinterface-projects-unified:unified-retrieve"
+include "thenx-deinterface-projects:thenx-deinterface-projects-unified:unified-update"
+include "thenx-deinterface-projects:thenx-deinterface-projects-unified:unified-delete"
 
 file("${rootDir}/thenx-deinterface-projects").eachDirMatch(~/thenx-deinterface-projects.*/) {
     include "thenx-deinterface-projects:${it.name}"
@@ -26,3 +27,4 @@ file("${rootDir}/thenx-deinterface-projects").eachDirMatch(~/thenx-deinterface-p
 file("${rootDir}/thenx-deinterface-tests").eachDirMatch(~/thenx-deinterface-tests.*/) {
     include "thenx-deinterface-tests:${it.name}"
 }
+

@@ -16,20 +16,35 @@
 
 package org.thenx;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @author wales
  * <p>
- * Thenx De-interface 项目入口
+ * 自定义返回值
+ * </p>
+ *
+ * <ul>
+ *     <li> 1. serialVersionUID</li>
+ *     <li> 2. success: 操作状态</li>
+ *     <li> 3. id: 用于写入操作后的主键返回</li>
+ *     <li> 4. msg: 返回消息</li>
+ *     <li> 5. data: 返回数据</li>
+ * </ul>
  */
-@SpringBootApplication
-@MapperScan({"org.thenx.dao.**"})
-public class ThenxDeInterfaceEntranceApplication {
+@Data
+public class Result implements Serializable {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ThenxDeInterfaceEntranceApplication.class, args);
-    }
+    private static final long serialVersionUID = -7319737625485900657L;
+
+    private boolean success = true;
+
+    private String id;
+
+    private String msg = "操作成功";
+
+    private Object data;
 }
+

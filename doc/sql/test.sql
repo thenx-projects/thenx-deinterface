@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-bootJar.enabled = true
+create table sm_datasource
+(
+    id           varchar(50)   not null
+        primary key,
+    ds_code       varchar(200)  not null,
+    table_name      varchar(200)  not null,
+    ds_desc       varchar(200)  not null,
+    ds_cat        varchar(200)  not null,
+    ds_type       varchar(200)  not null,
+    select_clause varchar(2000) not null,
+    order_clause  varchar(200)  null
 
-dependencies {
-    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-config'))
-    implementation(project(':thenx-deinterface-projects:thenx-deinterface-projects-unified:unified-retrieve'))
-}
-
-springBoot {
-    mainClass.set('org.thenx.ThenxDeInterfaceEntranceApplication')
-}
+)
+    comment '数据源测试表';

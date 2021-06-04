@@ -14,22 +14,52 @@
  * limitations under the License.
  */
 
-package org.thenx;
+package org.thenx.entity;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.Data;
 
 /**
  * @author wales
  * <p>
- * Thenx De-interface 项目入口
+ * 数据源基本数据模型
  */
-@SpringBootApplication
-@MapperScan({"org.thenx.dao.**"})
-public class ThenxDeInterfaceEntranceApplication {
+@Data
+public class UnifiedRetrieveEntity {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ThenxDeInterfaceEntranceApplication.class, args);
-    }
+    private String id;
+
+    /**
+     * 配置表编码
+     */
+    private String dsCode;
+
+    /**
+     * 表名
+     */
+    private String tblName;
+
+    /**
+     * 描述
+     */
+    private String dsDesc;
+
+    /**
+     * 查看数据源
+     */
+    private String dsCat;
+
+    /**
+     * 类型
+     */
+    private String dsType;
+
+    /**
+     * 具体SQL语句
+     */
+    private String selectClause;
+
+    /**
+     * 条件
+     */
+    private String orderClause;
 }
