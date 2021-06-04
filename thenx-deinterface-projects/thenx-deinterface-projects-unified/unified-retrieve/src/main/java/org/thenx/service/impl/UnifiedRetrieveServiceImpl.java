@@ -200,27 +200,4 @@ public class UnifiedRetrieveServiceImpl implements UnifiedRetrieveService {
         }
         return i;
     }
-
-//    /**
-//     * 处理参数
-//     *
-//     * @param map
-//     * @return
-//     */
-//    private Map<String, String> fixSql(Map<String, String> map) {
-//        Map<String, String> maps = new HashMap<>();
-//        String sql = map.get("sql");
-//        if (null == sql) {
-//            return null;
-//        }
-//
-//        for (String param : map.keySet()) {
-//            String getParams = "@" + Underline2Camel.underline2Camel(param, true);
-//            char[] chars = getParams.toCharArray();
-//            chars[1] += 32;
-//            sql = sql.replaceAll(String.valueOf(chars), map.get(param));
-//        }
-//        maps.put("sql", sql);
-//        return maps;
-//    }
 }

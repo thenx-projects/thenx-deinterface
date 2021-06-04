@@ -24,7 +24,6 @@ file("${rootDir}/thenx-deinterface-projects").eachDirMatch(~/thenx-deinterface-p
     include "thenx-deinterface-projects:${it.name}"
 }
 
-
 file("${rootDir}/thenx-deinterface-tests").eachDirMatch(~/thenx-deinterface-tests.*/) {
     include "thenx-deinterface-tests:${it.name}"
 }

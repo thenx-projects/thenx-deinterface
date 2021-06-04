@@ -26,6 +26,8 @@ import lombok.Data;
 @Data
 public class UnifiedRetrieveEntity {
 
+    private String id;
+
     /**
      * 配置表编码
      */
