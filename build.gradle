@@ -16,7 +16,7 @@
 
 buildscript {
     ext {
-        springBootVersion = '2.5.0' as Object
+        springBootVersion = '2.5.4' as Object
     }
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public/' }
